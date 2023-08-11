@@ -38,7 +38,7 @@
                     <form action="deleteRecord"
                           method="post" class="d-inline-flex pull-right" style="float:right">
                         <input type="hidden" name="id"
-                               value="1" th:attr="value=${phoneBook.phoneBookID}" />
+                               value="1" th:attr="value=${phoneBook.phoneBookID}"/>
                         <button type="submit"
                                 class="btn btn-danger btn-sm">
                             <span th:text="${delRecord}"/>
@@ -47,7 +47,7 @@
                     <form action="editRecord"
                           method="post" class="d-inline-flex pull-right" style="float:right">
                         <input type="hidden" name="id"
-                               value="${phoneBook.phoneBookID}" />
+                               value="1" th:attr="value=${phoneBook.phoneBookID}"/>
                         <button type="submit"
                                 class="btn btn-success btn-sm">
                             <span th:text="${editRecord}"/>

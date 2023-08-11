@@ -35,11 +35,17 @@ public class RecordController {
             "+7(919)154-56-78","st. Lenina 1, 15","worker");
         model.addAttribute("phoneBook", phoneBook);
         model.addAttribute("header", "Notebook");
+        model.addAttribute("editRecord","Edit record");//"Добавить запись");
         return "edit-record";
     }
 
     @PostMapping(value = "/editSaveRecord")
-    public String editSaveRecord(@ModelAttribute("phoneBook") PhoneBook phoneBook) {
+    public String editSaveRecord(@ModelAttribute("phoneBook") PhoneBook phoneBook, Model model) {
+        model.addAttribute("phoneBook", phoneBook);
+        model.addAttribute("header", "Notebook");
+        model.addAttribute("addRecord","Add record");//"Добавить запись");
+        model.addAttribute("editRecord","Edit record");//"Добавить запись");
+        model.addAttribute("delRecord","Delete record");//"Добавить запись");
         return "index";
     }
 

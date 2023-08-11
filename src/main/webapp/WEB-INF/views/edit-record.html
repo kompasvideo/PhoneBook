@@ -11,32 +11,31 @@
 <!-- Navigation -->
 <div class="container">
     <h2 class="text-center alert-secondary">
-        Записная книжка
+        <p th:text="${header}"/>
     </h2>
     <div class="row">
         <div class="col-3">&nbsp;</div>
         <div class="card card-outline-primary text-center border-primary col-6 pad">
             <div class="card-header bg-faded bg-primary text-white">
-                Изменить запись
+                <span th:text="${editRecord}"/>
             </div>
             <div class="card-body">
-                <form:form action="editSaveRecord" method="post" modelAttribute="phoneBook">
-                    <input type="hidden" name="id"
-                           value="${phoneBook.phoneBookID}" />
-                    Фамилия <form:input path="lastName" class="form-control"/>
+                <form th:action="@{/editSaveRecord}" th:method="post" th:object="${phoneBook}">
+                    <input type="hidden" name="id" th:field="*{phoneBookID}" />
+                    First name <input th:field="*{lastName}" class="form-control"/>
                     <br/>
-                    Имя <form:input path="firstName" class="form-control"/>
+                    Second name <input th:field="*{firstName}" class="form-control"/>
                     <br/>
-                    Отчество <form:input path="threeName" class="form-control"/>
+                    Third <input th:field="*{threeName}" class="form-control"/>
                     <br/>
-                    Номер телефона <form:input path="numberPhone" class="form-control"/>
+                    Phone number <input th:field="*{numberPhone}" class="form-control"/>
                     <br/>
-                    Адрес <form:input path="address" class="form-control"/>
+                    Address <input th:field="*{address}" class="form-control"/>
                     <br/>
-                    Описание <form:input path="description" class="form-control"/>
+                    Description <input th:field="*{description}" class="form-control"/>
                     <br/>
-                    <input type="submit" class="d-inline-flex btn btn-block btn-primary" value="Изменить запись" />
-                </form:form>
+                    <input type="submit" class="d-inline-flex btn btn-block btn-primary" th:value="${editRecord}"/>
+                </form>
             </div>
         </div>
         <div class="col-3">&nbsp;</div>
