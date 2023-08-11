@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PhoneBookController {
 
-    @GetMapping(value = "/", produces = "text/html; charset=utf-8" )
+    @GetMapping(value = "/")
     public String showFirstView(Model model) {
-        PhoneBook phoneBook = new PhoneBook(1,"Иванов", "Иван", "Иванович",
-            "+7(919)154-56-78","ул. Ленина 1, 15","рабочий");
+        PhoneBook phoneBook = new PhoneBook(1,"Ivanov", "Ivan", "Ivanovich",
+            "+7(919)154-56-78","st. Lenina 1, 15","worker");
         model.addAttribute("phoneBook", phoneBook);
+        model.addAttribute("header", "Notebook");
+        model.addAttribute("addRecord","Add record");//"Добавить запись");
+        model.addAttribute("editRecord","Edit record");//"Добавить запись");
+        model.addAttribute("delRecord","Delete record");//"Добавить запись");
         return "index";
     }
     @GetMapping("/viewAddRecord")
