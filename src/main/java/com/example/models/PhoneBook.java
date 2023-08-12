@@ -2,99 +2,106 @@ package com.example.models;
 
 public class PhoneBook {
     // ID
-    private int PhoneBookID;
+    private int phoneBookID;
     // Фамилия
-    private String LastName;
+    private String lastName;
     // Имя
-    private String FirstName;
+    private String firstName;
     // Отчество
-    private String ThreeName;
+    private String threeName;
     // Номер телефона
-    private String NumberPhone;
+    private String numberPhone;
     //Адрес
-    private String Address;
+    private String address;
     // Описание
-    private String Description;
+    private String description;
 
     public PhoneBook() {
+        phoneBookID = 0;
+        lastName = "";
+        firstName = "";
+        threeName = "";
+        numberPhone = "";
+        address = "";
+        description = "";
     }
 
     public PhoneBook(int phoneBookID, String lastName, String firstName, String threeName, String numberPhone, String address, String description) {
-        PhoneBookID = phoneBookID;
-        LastName = lastName;
-        FirstName = firstName;
-        ThreeName = threeName;
-        NumberPhone = numberPhone;
-        Address = address;
-        Description = description;
+        this.phoneBookID = phoneBookID;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.threeName = threeName;
+        this.numberPhone = numberPhone;
+        this.address = address;
+        this.description = description;
     }
 
     public int getPhoneBookID() {
-        return PhoneBookID;
+        return phoneBookID;
     }
 
     public void setPhoneBookID(int phoneBookID) {
-        PhoneBookID = phoneBookID;
+        this.phoneBookID = phoneBookID;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getThreeName() {
-        return ThreeName;
+        return threeName;
     }
 
     public void setThreeName(String threeName) {
-        ThreeName = threeName;
+        this.threeName = threeName;
     }
 
     public String getNumberPhone() {
-        return NumberPhone;
+        return numberPhone;
     }
 
     public void setNumberPhone(String numberPhone) {
-        NumberPhone = numberPhone;
+        this.numberPhone = numberPhone;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     @Override
     public String toString() {
         return "PhoneBook{" +
-            "PhoneBookID=" + PhoneBookID +
-            ", LastName='" + LastName + '\'' +
-            ", FirstName='" + FirstName + '\'' +
-            ", ThreeName='" + ThreeName + '\'' +
-            ", NumberPhone='" + NumberPhone + '\'' +
-            ", Address='" + Address + '\'' +
-            ", Description='" + Description + '\'' +
+            "PhoneBookID=" + phoneBookID +
+            ", LastName='" + lastName + '\'' +
+            ", FirstName='" + firstName + '\'' +
+            ", ThreeName='" + threeName + '\'' +
+            ", NumberPhone='" + numberPhone + '\'' +
+            ", Address='" + address + '\'' +
+            ", Description='" + description + '\'' +
             '}';
     }
 }

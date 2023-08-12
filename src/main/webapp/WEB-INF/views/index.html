@@ -22,6 +22,7 @@
             </form>
         </div>
         <div class="col-10">
+            <div th:each="phoneBook : ${phoneBooks}">
             <div class="card card-outline-primary m-1 p-1">
                 <div>
                     <form th:method="PA" action="viewRecord" th:attr="action=@{/viewRecord}"
@@ -54,6 +55,7 @@
                         </button>
                     </form>
                 </div>
+            </div>
             </div>
         </div>
     </div>
