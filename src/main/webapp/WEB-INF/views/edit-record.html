@@ -22,11 +22,11 @@
             <div class="card-body">
                 <form th:action="@{/editSaveRecord}" th:method="post" th:object="${phoneBook}">
                     <input type="hidden" name="id" th:field="*{phoneBookID}" />
-                    First name <input th:field="*{lastName}" class="form-control"/>
+                    Last name <input th:field="*{lastName}" class="form-control"/>
                     <br/>
-                    Second name <input th:field="*{firstName}" class="form-control"/>
+                    First name <input th:field="*{firstName}" class="form-control"/>
                     <br/>
-                    Third <input th:field="*{threeName}" class="form-control"/>
+                    Third name <input th:field="*{threeName}" class="form-control"/>
                     <br/>
                     Phone number <input th:field="*{numberPhone}" class="form-control"/>
                     <br/>

@@ -10,4 +10,6 @@ public interface PhoneBookService {
     List<PhoneBook> getPhoneBooks();
     void editRecordToPhoneBooks(PhoneBook newPhoneBook);
     void deleteRecordToPhoneBooks(int id);
+    PhoneBook getNewPhoneBook();
+    void addRecordToPhoneBooks(PhoneBook newPhoneBook);
 }
